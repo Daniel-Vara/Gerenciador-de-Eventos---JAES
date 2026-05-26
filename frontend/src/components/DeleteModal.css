@@ -1,0 +1,94 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(4px);
+  z-index: 2000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.modal-box {
+  background-color: var(--surface-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-lg);
+  max-width: 480px;
+  width: 100%;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Modal Header styling */
+.modal-header {
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title-area {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.title-area h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.icon-warning {
+  color: var(--status-canceled);
+}
+
+.btn-close-x {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease;
+}
+
+.btn-close-x:hover {
+  color: var(--text-primary);
+}
+
+/* Body Content */
+.modal-body {
+  padding: 24px;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Footer Controls */
+.modal-footer {
+  padding: 16px 24px;
+  background-color: var(--surface-light);
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+@media (max-width: 480px) {
+  .modal-footer {
+    flex-direction: column-reverse;
+  }
+  .modal-footer .btn {
+    width: 100%;
+  }
+}

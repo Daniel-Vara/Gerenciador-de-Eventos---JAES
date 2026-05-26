@@ -1,0 +1,55 @@
+/* Layout Wrapper */
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Page Headers */
+.page-header {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.page-title h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 4px;
+}
+
+.page-title p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+/* Animations for route paths */
+.page-container {
+  animation: fadeInUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Responsive Footer Bottom spacing */
+footer {
+  background-color: var(--surface-bg);
+  border-top: 1px solid var(--border-color);
+  padding: 24px 0;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin-top: auto;
+}
+
+footer p {
+  margin: 0;
+}

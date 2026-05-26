@@ -1,0 +1,183 @@
+.main-nav {
+  background-color: var(--surface-bg);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.main-nav .nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.nav-logo {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: opacity 0.2s ease;
+}
+
+.nav-logo:hover {
+  opacity: 0.95;
+}
+
+.nav-logo-image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: var(--border-radius-md);
+  background-color: var(--surface-light);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nav-logo:hover .nav-logo-image-container {
+  transform: translateY(-2px);
+  border-color: var(--primary-color);
+  box-shadow: 0 6px 16px rgba(255, 140, 0, 0.2);
+}
+
+.nav-logo-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+.nav-logo-svg {
+  width: 22px;
+  height: 22px;
+}
+
+.logo-brand-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.25;
+}
+
+.logo-accent {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  letter-spacing: 0.5px;
+}
+
+.logo-sub {
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 10px 0;
+  position: relative;
+  transition: color 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.nav-item:hover {
+  color: var(--primary-color);
+}
+
+/* Underline Animation (Parity with original JAES.css) */
+.nav-item::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary-color);
+  transition: width 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.nav-item.active {
+  color: var(--primary-color);
+}
+
+.nav-item.active::after,
+.nav-item:hover::after {
+  width: 100%;
+}
+
+.menu-toggle {
+  display: none; /* Hidden on Desktop */
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  cursor: pointer;
+  padding: 8px;
+  transition: transform 0.2s ease;
+}
+
+.menu-toggle:active {
+  transform: scale(0.9);
+}
+
+/* ============================================================================
+   RESPONSIVE DESIGN (Mobile First Nav Drawer)
+   ============================================================================ */
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* Visible on Mobile */
+  }
+
+  .nav-links {
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    width: 100%;
+    height: calc(100vh - var(--header-height));
+    flex-direction: column;
+    background-color: var(--surface-bg);
+    padding: 40px 24px;
+    align-items: flex-start;
+    gap: 20px;
+    transform: translateX(100%); /* Slid out to right */
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    border-top: 1px solid var(--border-color);
+  }
+
+  .nav-links.nav-open {
+    transform: translateX(0); /* Slide in */
+  }
+
+  .nav-item {
+    width: 100%;
+    font-size: 1.1rem;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .nav-item::after {
+    display: none; /* Disable underline effect on mobile */
+  }
+}

@@ -1,0 +1,145 @@
+.directory-filter {
+  background-color: var(--surface-bg);
+  border: 1px solid var(--border-color);
+  padding: 16px 24px;
+  border-radius: var(--border-radius-lg);
+  margin-bottom: 30px;
+  box-shadow: var(--card-shadow);
+}
+
+/* Directory Table Wrapper */
+.directory-table-wrapper {
+  background-color: var(--surface-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-lg);
+  overflow-x: auto; /* Enable scroll on mobile */
+  box-shadow: var(--card-shadow);
+}
+
+.directory-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+.directory-table th {
+  padding: 16px 24px;
+  background-color: var(--surface-light);
+  border-bottom: 2px solid var(--border-color);
+  color: var(--text-secondary);
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.directory-table td {
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  vertical-align: middle;
+}
+
+.directory-row {
+  transition: background-color 0.2s ease;
+}
+
+.directory-row:hover {
+  background-color: rgba(255, 140, 0, 0.02);
+}
+
+/* Table avatar and name alignment */
+.table-p-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.table-p-name {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.table-p-age {
+  font-weight: 500;
+}
+
+.table-event-link {
+  font-weight: 600;
+  color: var(--primary-color);
+  transition: color 0.2s ease;
+}
+
+.table-event-link:hover {
+  color: var(--primary-hover);
+  text-decoration: underline;
+}
+
+/* Meta metadata blocks inside cells */
+.table-meta-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.table-meta-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.table-meta-item .meta-icon {
+  color: var(--primary-color);
+}
+
+/* Actions cell alignment */
+.actions-header {
+  text-align: right;
+}
+
+.actions-cell {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Empty State Card */
+.no-participants-card {
+  text-align: center;
+  background-color: var(--surface-bg);
+  border: 1px dashed var(--border-color);
+  border-radius: var(--border-radius-lg);
+  padding: 60px 24px;
+  color: var(--text-secondary);
+  box-shadow: var(--card-shadow);
+  max-width: 500px;
+  margin: 40px auto;
+}
+
+.no-participants-card h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.no-participants-card p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+/* Responsiveness on tables */
+@media (max-width: 768px) {
+  .directory-table th:nth-child(4),
+  .directory-table td:nth-child(4) {
+    display: none; /* Hide location & date on medium devices */
+  }
+}
+
+@media (max-width: 600px) {
+  .directory-table th:nth-child(2),
+  .directory-table td:nth-child(2) {
+    display: none; /* Hide age on mobile devices */
+  }
+}

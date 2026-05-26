@@ -1,0 +1,74 @@
+.toast-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 320px;
+  max-width: 450px;
+  padding: 16px;
+  background-color: #1e1e1e;
+  border-radius: var(--border-radius-md);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  pointer-events: auto;
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  margin-bottom: 10px;
+}
+
+.toast-success {
+  border-left: 4px solid var(--status-completed);
+  box-shadow: 0 4px 20px rgba(46, 204, 113, 0.1);
+}
+
+.toast-error {
+  border-left: 4px solid var(--status-canceled);
+  box-shadow: 0 4px 20px rgba(231, 76, 60, 0.1);
+}
+
+.toast-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.icon-emerald {
+  color: var(--status-completed);
+}
+
+.icon-crimson {
+  color: var(--status-canceled);
+}
+
+.toast-content {
+  flex: 1;
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.toast-close {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease;
+}
+
+.toast-close:hover {
+  color: var(--text-primary);
+}
+
+/* Toast Container positioning */
+.toast-container {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  pointer-events: none;
+}

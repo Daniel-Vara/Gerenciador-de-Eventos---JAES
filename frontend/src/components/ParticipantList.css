@@ -1,0 +1,182 @@
+.participant-section {
+  background-color: var(--surface-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-lg);
+  padding: 30px;
+  box-shadow: var(--card-shadow);
+}
+
+.participant-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.title-icon {
+  color: var(--primary-color);
+}
+
+.section-title h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.btn-sm {
+  padding: 8px 16px;
+  font-size: 0.85rem;
+}
+
+/* Add form styles */
+.add-participant-form {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  background-color: var(--surface-light);
+  border: 1px dashed var(--primary-color);
+  border-radius: var(--border-radius-md);
+  padding: 16px;
+  margin-bottom: 24px;
+}
+
+.form-inputs {
+  display: flex;
+  gap: 12px;
+  flex: 1;
+}
+
+.form-group-inline {
+  flex: 1;
+}
+
+.age-input {
+  max-width: 100px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 8px;
+}
+
+/* List details */
+.empty-participants {
+  text-align: center;
+  padding: 30px 10px;
+  color: var(--text-muted);
+  border: 1px dashed rgba(255, 255, 255, 0.05);
+  border-radius: var(--border-radius-md);
+  font-size: 0.95rem;
+}
+
+.participants-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.participant-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--surface-light);
+  border: 1px solid var(--border-color);
+  padding: 12px 20px;
+  border-radius: var(--border-radius-md);
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.participant-row:hover {
+  border-color: rgba(255, 140, 0, 0.2);
+  transform: translateX(4px);
+}
+
+.participant-info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.p-avatar {
+  width: 38px;
+  height: 38px;
+  background-color: rgba(255, 140, 0, 0.1);
+  color: var(--primary-color);
+  border: 1px solid rgba(255, 140, 0, 0.3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.p-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.p-name {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+}
+
+.p-age {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.action-buttons {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+/* Editing inline row styles */
+.inline-edit-fields {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+  align-items: center;
+}
+
+.inline-edit-fields input {
+  padding: 8px 12px;
+  font-size: 0.9rem;
+}
+
+.edit-age {
+  max-width: 90px;
+}
+
+@media (max-width: 600px) {
+  .add-participant-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .form-inputs {
+    flex-direction: column;
+  }
+  .age-input {
+    max-width: 100%;
+  }
+  .inline-edit-fields {
+    flex-wrap: wrap;
+  }
+  .inline-edit-fields input {
+    flex: 1;
+    min-width: 120px;
+  }
+  .edit-age {
+    max-width: 100%;
+  }
+}

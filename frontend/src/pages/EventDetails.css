@@ -1,0 +1,224 @@
+.event-details-container {
+  max-width: var(--max-width);
+}
+
+.details-layout {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 30px;
+  align-items: start;
+}
+
+/* Info card details */
+.info-card {
+  background-color: var(--surface-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-lg);
+  padding: 30px;
+  margin-bottom: 24px;
+  box-shadow: var(--card-shadow);
+}
+
+.info-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.quick-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.details-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: var(--text-primary);
+  line-height: 1.25;
+}
+
+.details-meta-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  padding: 20px 0;
+  margin-bottom: 24px;
+}
+
+.meta-block {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.meta-block .meta-icon {
+  color: var(--primary-color);
+  flex-shrink: 0;
+}
+
+.meta-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.meta-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.meta-val {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.details-description h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.details-description p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  text-align: justify;
+}
+
+/* Resolution and outcome selectors */
+.outcome-selection-card {
+  background-color: var(--surface-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-lg);
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: var(--card-shadow);
+}
+
+.outcome-selection-card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.outcome-selection-card p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+
+.outcome-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.outcome-buttons .btn {
+  flex: 1;
+}
+
+/* Inline forms */
+.outcome-form-card {
+  background-color: var(--surface-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-lg);
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: var(--card-shadow);
+}
+
+.outcome-form-card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+}
+
+.form-actions-inline {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+/* History outcomes display */
+.history-panel {
+  border-radius: var(--border-radius-lg);
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: var(--card-shadow);
+  border: 1px solid var(--border-color);
+}
+
+.panel-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.panel-header h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.history-date {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 10px;
+}
+
+.history-notes {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.history-notes strong {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.completed-panel {
+  border-left: 4px solid var(--status-completed);
+  background-color: rgba(46, 204, 113, 0.03);
+}
+
+.completed-panel .panel-header h3 {
+  color: var(--status-completed);
+}
+
+.icon-success {
+  color: var(--status-completed);
+}
+
+.canceled-panel {
+  border-left: 4px solid var(--status-canceled);
+  background-color: rgba(231, 76, 60, 0.03);
+}
+
+.canceled-panel .panel-header h3 {
+  color: var(--status-canceled);
+}
+
+.icon-danger {
+  color: var(--status-canceled);
+}
+
+/* Responsive sidebar */
+@media (max-width: 992px) {
+  .details-layout {
+    grid-template-columns: 1fr;
+  }
+}
